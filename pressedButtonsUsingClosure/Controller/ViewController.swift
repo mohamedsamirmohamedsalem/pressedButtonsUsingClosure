@@ -9,12 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
+    @IBOutlet var myView: ViewButtons!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        myView.didPressOnButton = { itiems in
+            switch itiems {
+            case .minus:
+                print("-----")
+            case .plus:
+                print("+++++")
+            }
+        }
+
+
     }
-
-
+    
+    
 }
 
